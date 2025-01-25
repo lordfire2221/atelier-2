@@ -17,3 +17,7 @@ J'ai aussi recupérer les information sur :
 Par la suite j'ai fait un script python pour automatiser la récupération des informations, il se trouve 
 
 dans le ficihier automatisation.py
+
+le répertoire des fichiers parquet se trouve dans : data/parquet2
+# Etape 3
+le code de cette étape est le fichier charge-data.py
