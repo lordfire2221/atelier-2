@@ -1,0 +1,31 @@
+[0m16:25:09.054855 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019B893D2ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019B893D2900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019B893D2E70>]}
+
+
+============================== 16:25:09.092900 | ac469e4a-a992-45fd-b8a7-d23c535fbd99 ==============================
+[0m16:25:09.092900 [info ] [MainThread]: Running with dbt=1.9.1
+[0m16:25:09.094408 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\lordfire\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init atelier3', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m16:25:09.349297 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'WindowsPath'.. Dictionary: {'dir': WindowsPath('C:/Users/lordfire/.dbt')}
+[0m16:25:09.350304 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m16:25:09.360267 [debug] [MainThread]: Starter project path: D:\archi décisionnelle\myenv\Lib\site-packages\dbt\include\starter_project
+[0m16:25:09.407579 [info ] [MainThread]: 
+Your new dbt project "atelier3" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:25:09.409591 [info ] [MainThread]: Setting up your profile.
+[0m16:25:26.046128 [info ] [MainThread]: Profile atelier3 written to C:\Users\lordfire\.dbt\profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m16:25:26.048187 [debug] [MainThread]: Command `dbt init` succeeded at 16:25:26.047129 after 17.25 seconds
+[0m16:25:26.048187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019B88284A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019B8960A1E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019B893D2900>]}
+[0m16:25:26.048187 [debug] [MainThread]: Flushing usage events
+[0m16:25:26.492224 [debug] [MainThread]: An error was encountered while trying to flush usage events
