@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Schéma contenant les données brutes du lac de données."
+    tables:
+      - name: dimension_temps
+        description: "Table contenant les informations temporelles."
+      - name: dimension_contributeurs
+        description: "Table contenant les informations sur les contributeurs."
+      - name: dimension_releases
+        description: "Table contenant les informations sur les releases de projet."
+      - name: dimension_issues
+        description: "Table contenant les informations sur les issues."
+      - name: dimension_commits
+        description: "Table contenant les informations sur les commits."
+      - name: dimension_projets
+        description: "Table contenant les informations générales des projets GitHub."
+      - name: fact_activite_projet
+        description: "Table contenant les métriques agrégées sur l'activité des projets."
+      - name: fact_contributions
+        description: "Table contenant les contributions individuelles des contributeurs."
+      - name: fact_releases
+        description: "Table contenant les métriques liées aux releases."
+      - name: fact_performance_commits
+        description: "Table contenant les données de performance des commits."

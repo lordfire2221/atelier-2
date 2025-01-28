@@ -1,36 +1,32 @@
-
-# Name your project! Project names should contain only lowercase characters
-# and underscores. A good package name should reflect your organization's
-# name or the intended use of these models
+# Nom du projet
 name: 'atelier3'
 version: '1.0.0'
 
-# This setting configures which "profile" dbt uses for this project.
+# Profil dbt à utiliser pour ce projet (doit correspondre au fichier profiles.yml)
 profile: 'atelier3'
 
-# These configurations specify where dbt should look for different types of files.
-# The `model-paths` config, for example, states that models in this project can be
-# found in the "models/" directory. You probably won't need to change these!
-model-paths: ["models"]
-analysis-paths: ["analyses"]
-test-paths: ["tests"]
-seed-paths: ["seeds"]
-macro-paths: ["macros"]
-snapshot-paths: ["snapshots"]
+# Chemins vers les fichiers spécifiques du projet
+model-paths: ["models"]         # Répertoire pour les modèles SQL
+analysis-paths: ["analyses"]    # Répertoire pour les analyses
+test-paths: ["tests"]           # Répertoire pour les tests
+seed-paths: ["seeds"]           # Répertoire pour les fichiers seed
+macro-paths: ["macros"]         # Répertoire pour les macros
+snapshot-paths: ["snapshots"]   # Répertoire pour les snapshots
 
-clean-targets:         # directories to be removed by `dbt clean`
+clean-targets:                  # Répertoires nettoyés par `dbt clean`
   - "target"
   - "dbt_packages"
 
-
-# Configuring models
-# Full documentation: https://docs.getdbt.com/docs/configuring-models
-
-# In this example config, we tell dbt to build all models in the example/
-# directory as views. These settings can be overridden in the individual model
-# files using the `{{ config(...) }}` macro.
+# Configuration des modèles
 models:
   atelier3:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    # Configuration par défaut pour tous les modèles
+    +materialized: table        # Les modèles sont matérialisés en tables par défaut
+    +schema: raw                # Schéma par défaut pour tous les modèles dans `raw`
+
+    # Configuration pour le sous-dossier cleansed
+    cleansed:
+      +schema: cleansed         # Les modèles cleansed iront dans le schéma cleansed
+      +materialized: table      # Les modèles cleansed seront matérialisés en tables
+
+    # Configuration pour le sous-d

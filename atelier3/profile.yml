@@ -1,0 +1,7 @@
+atelier3:
+  outputs:
+    dev:
+      type: duckdb
+      path: ./data_lake.duckdb
+      schema: raw
+  target: dev
