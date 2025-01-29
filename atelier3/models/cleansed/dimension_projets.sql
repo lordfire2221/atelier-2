@@ -1,11 +1,12 @@
-WITH filtered AS (
+WITH cleaned_projects AS (
     SELECT
-        id_projet,
-        nom,
+        project_id,
+        project_name,
         description,
-        nombre_stars,
-        nombre_forks
-    FROM {{ source('raw', 'dimension_projets') }}
-    WHERE nombre_stars > 0
+        start_date,
+        end_date,
+        status
+    FROM {{ source('raw', 'projects') }}
 )
-SELECT * FROM filtered;
+
+SELECT * FROM cleaned_projects

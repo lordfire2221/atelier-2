@@ -1,9 +1,10 @@
-WITH aggregated AS (
+WITH cleaned_release_facts AS (
     SELECT
-        id_projet,
-        id_release,
-        COUNT(*) AS nombre_releases
+        release_id,
+        project_id,
+        total_downloads,
+        total_contributors
     FROM {{ source('raw', 'fact_releases') }}
-    GROUP BY id_projet, id_release
 )
-SELECT * FROM aggregated;
+
+SELECT * FROM cleaned_release_facts

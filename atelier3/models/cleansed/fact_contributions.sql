@@ -1,9 +1,10 @@
-WITH filtered AS (
+WITH cleaned_contributions AS (
     SELECT
-        id_contribution,
-        id_contributeur,
-        id_projet,
-        DATE(date_contribution) AS date_contribution
+        contributor_id,
+        project_id,
+        commit_id,
+        contribution_date
     FROM {{ source('raw', 'fact_contributions') }}
 )
-SELECT * FROM filtered;
+
+SELECT * FROM cleaned_contributions

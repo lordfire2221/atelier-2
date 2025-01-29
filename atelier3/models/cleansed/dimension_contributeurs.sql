@@ -1,10 +1,10 @@
-WITH filtered AS (
+WITH cleaned_contributors AS (
     SELECT
-        id_contributeur,
-        nom,
-        localisation,
-        nombre_contributions
-    FROM {{ source('raw', 'dimension_contributeurs') }}
-    WHERE nombre_contributions > 0
+        contributor_id,
+        contributor_name,
+        contributor_email,
+        registration_date
+    FROM {{ source('raw', 'contributors') }}
 )
-SELECT * FROM filtered;
+
+SELECT * FROM cleaned_contributors

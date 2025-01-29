@@ -1,12 +1,11 @@
-WITH cleaned AS (
+WITH cleaned_releases AS (
     SELECT
-        id_release,
-        nom,
+        release_id,
+        project_id,
         version,
-        date_publication,
-        TRIM(description) AS description_clean,
-        EXTRACT(YEAR FROM date_publication) AS annee_publication
-    FROM {{ source('raw', 'dimension_releases') }}
-    WHERE date_publication IS NOT NULL
+        release_date,
+        description
+    FROM {{ source('raw', 'releases') }}
 )
-SELECT * FROM cleaned;
+
+SELECT * FROM cleaned_releases

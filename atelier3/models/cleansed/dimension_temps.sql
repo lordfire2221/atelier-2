@@ -1,4 +1,4 @@
-WITH normalized AS (
+WITH cleaned_time AS (
     SELECT
         id_temps,
         jour,
@@ -14,4 +14,5 @@ WITH normalized AS (
         END AS saison
     FROM {{ source('raw', 'dimension_temps') }}
 )
-SELECT * FROM normalized;
+
+SELECT * FROM cleaned_time

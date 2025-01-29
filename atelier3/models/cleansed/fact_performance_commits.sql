@@ -1,10 +1,10 @@
-WITH metrics AS (
+WITH cleaned_commit_performance AS (
     SELECT
-        id_commit,
-        id_projet,
-        id_contributeur,
-        performance_score
+        commit_id,
+        lines_added,
+        lines_deleted,
+        files_changed
     FROM {{ source('raw', 'fact_performance_commits') }}
-    WHERE performance_score IS NOT NULL
 )
-SELECT * FROM metrics;
+
+SELECT * FROM cleaned_commit_performance

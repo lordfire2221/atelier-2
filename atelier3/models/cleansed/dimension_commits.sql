@@ -1,9 +1,11 @@
-WITH normalized AS (
+WITH cleaned_commits AS (
     SELECT
-        id_commit,
-        auteur,
-        message,
-        DATE(date_commit) AS date_commit
-    FROM {{ source('raw', 'dimension_commits') }}
+        commit_id,
+        author_name,
+        author_email,
+        commit_date,
+        message
+    FROM {{ source('raw', 'commits') }}
 )
-SELECT * FROM normalized;
+
+SELECT * FROM cleaned_commits

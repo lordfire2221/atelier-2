@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: commits
+      - name: contributors
+      - name: issues
+      - name: projects
+      - name: releases
+      - name: dimension_temps
+      - name: fact_activite_projet
+      - name: fact_contributions
+      - name: fact_performance_commits
+      - name: fact_releases
